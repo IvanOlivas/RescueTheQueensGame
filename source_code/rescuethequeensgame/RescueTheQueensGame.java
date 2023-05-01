@@ -1,7 +1,5 @@
 /*
 Ivan Olivas
-5/6/2020
-Final Project
 Program opens a GUI in which a player will play the Rescue the Queens game.
 The goal of this game is to find and save all of the Queens hidden on an N x N game board of
 cells (or squares) before all of the empty cells on the board are revealed. During the game play,
@@ -351,8 +349,8 @@ class RescueTheQueensGame {
         int n = in.nextInt();
         
         //input validation
-        while(n < 2) {
-            System.out.println("Invalid size, must be >= 2");
+        while(n > 20 || n < 2) {
+            System.out.println("Invalid size, must be between 2-20");
             System.out.print("Enter board size: ");
             n = in.nextInt(); 
         }
@@ -362,9 +360,7 @@ class RescueTheQueensGame {
         
         //game.print();         // FOR TESTING - prints array values to console
         
-        
         game.close();
-        
         
     }
 }   
